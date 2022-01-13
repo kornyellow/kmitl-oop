@@ -1,4 +1,4 @@
-public class Program2 {
+public class Pro2_64010009 {
 
 	final static double A = 3.4;
 	final static double B = 50.2;
@@ -12,7 +12,7 @@ public class Program2 {
 
 	public static void main(String args[]) {
 
-		Program2.solveLinearEquation();
+		Pro2_64010009.solveLinearEquation();
 
 		System.out.printf("x = %.4f\n", x);
 		System.out.printf("y = %.4f\n", y);

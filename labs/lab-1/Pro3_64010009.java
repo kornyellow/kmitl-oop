@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
-public class Program3 {
+public class Pro3_64010009 {
 
 	static int number = -1;
 	static int digit_sum = 0;
 
 	public static void main(String args[]) {
 
-		Program3.getUserInput();
-		Program3.findDigitSum();
+		Pro3_64010009.getUserInput();
+		Pro3_64010009.findDigitSum();
 
 		System.out.println("The sum of the digits is " + digit_sum);
 	}

@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
-public class Program5 {
+public class Pro5_64010009 {
 
 	static int lines = -1;
 
 	public static void main(String args[]) {
 
-		Program5.getUserInput();
-		Program5.printPyramid();
+		Pro5_64010009.getUserInput();
+		Pro5_64010009.printPyramid();
 	}
 
 	static void getUserInput() {
