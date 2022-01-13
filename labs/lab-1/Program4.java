@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Program04 {
+public class Program4 {
 
 	final static double KILO_PER_POUND = 0.45359237;
 	final static double INCH_PER_METER = 0.0254;
@@ -11,8 +11,8 @@ public class Program04 {
 
 	public static void main(String args[]) {
 
-		Program04.getUserInput();
-		Program04.findBMI();
+		Program4.getUserInput();
+		Program4.findBMI();
 
 		System.out.printf("BMI is %.4f\n", bmi);
 	}

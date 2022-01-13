@@ -1,4 +1,4 @@
-public class Program01 {
+public class Program1 {
 
 	final static int SEC_PER_BIRTH = 7;
 	final static int SEC_PER_DEATH = 13;
@@ -9,7 +9,7 @@ public class Program01 {
 
 	public static void main(String args[]) {
 
-		Program01.processPopulation(5);
+		Program1.processPopulation(5);
 
 		System.out.println(population);
 	}
