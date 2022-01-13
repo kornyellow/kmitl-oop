@@ -2,7 +2,7 @@
 
 A place to store my works on subject Object Oriented Programming
 
-- [/labs](https://github.com/KornYellow/kmitl-oop/tree/main/labs)
+- [/labs](https://github.com/KornYellow/kmitl-oop/tree/master/labs)
 
 ## Work to do / Done
 
