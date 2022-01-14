@@ -4,19 +4,20 @@ public class Pro1_64010009 {
 	final static int SEC_PER_DEATH = 13;
 	final static int SEC_PER_IMMIGRANT = 45;
 	final static int CURRENT_POPULATION = 312032486;
+	final static int AFTER_YEARS = 5;
 
 	static int population = CURRENT_POPULATION;
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 
-		Pro1_64010009.processPopulation(5);
+		Pro1_64010009.processPopulation();
 
 		System.out.println(population);
 	}
 
-	static void processPopulation(int years) {
+	static void processPopulation() {
 
-		int days = years * 365;
+		int days = AFTER_YEARS * 365;
 		int hours = days * 24;
 		int minutes = hours * 60;
 		int seconds = minutes * 60;
