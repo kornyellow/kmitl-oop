@@ -1,26 +1,37 @@
+import java.util.Scanner;
+
 public class Pro2_64010009 {
-
-	final static double A = 3.4;
-	final static double B = 50.2;
-	final static double C = 2.1;
-	final static double D = 0.55;
-	final static double E = 44.5;
-	final static double F = 5.9;
-
-	static double x = 0;
-	static double y = 0;
 
 	public static void main(String[] args) {
 
-		Pro2_64010009.solveLinearEquation();
+		Scanner scanner = new Scanner(System.in);
 
-		System.out.printf("x = %.4f\n", x);
-		System.out.printf("y = %.4f\n", y);
-	}
+		double a, b, c, d, e, f, x, y;
 
-	static void solveLinearEquation() {
+		System.out.print("Enter value of a: ");
+		a = scanner.nextDouble();
 
-		x = ((E*D) - (B*F)) / ((A*D) - (B*C));
-		y = ((A*F) - (E*C)) / ((A*D) - (B*C));
+		System.out.print("Enter value of b: ");
+		b = scanner.nextDouble();
+
+		System.out.print("Enter value of c: ");
+		c = scanner.nextDouble();
+
+		System.out.print("Enter value of d: ");
+		d = scanner.nextDouble();
+
+		System.out.print("Enter value of e: ");
+		e = scanner.nextDouble();
+
+		System.out.print("Enter value of f: ");
+		f = scanner.nextDouble();
+
+		x = ((e * d) - (b * f)) / ((a * d) - (b * c));
+		y = ((a * f) - (e * c)) / ((a * d) - (b * c));
+
+		System.out.println("Value of x: " + x);
+		System.out.println("Value of y: " + y);
+
+		scanner.close();
 	}
 }

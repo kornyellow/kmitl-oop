@@ -1,33 +1,38 @@
 public class Pro1_64010009 {
 
-	final static int SEC_PER_BIRTH = 7;
-	final static int SEC_PER_DEATH = 13;
-	final static int SEC_PER_IMMIGRANT = 45;
-
-	final static int CURRENT_POPULATION = 312032486;
-	final static int AFTER_YEARS = 5;
-
-	static int population = CURRENT_POPULATION;
-
 	public static void main(String[] args) {
 
-		Pro1_64010009.processPopulation();
+		final int BIRTHS_PER_SECOND = 7;
+		final int DEATHS_PER_SECOND = 13;
+		final int IMMIGRANTS_PER_SECOND = 45;
 
-		System.out.println(population);
-	}
+		int current_population = 312032486;
 
-	static void processPopulation() {
+		int days_per_year = 365;
+		int hours_per_year = days_per_year * 24;
+		int minutes_per_year = hours_per_year * 60;
+		int seconds_per_year = minutes_per_year * 60;
 
-		int days = AFTER_YEARS * 365;
-		int hours = days * 24;
-		int minutes = hours * 60;
-		int seconds = minutes * 60;
+		double new_births_per_year = (double) seconds_per_year / (double) BIRTHS_PER_SECOND;
+		double new_deaths_per_year = (double) seconds_per_year / (double) DEATHS_PER_SECOND;
+		double new_immigrants_per_year = (double) seconds_per_year / (double) IMMIGRANTS_PER_SECOND;
+		int new_total_per_year = (int) (new_births_per_year - new_deaths_per_year + new_immigrants_per_year);
 
-		double births = (float) seconds / (float) SEC_PER_BIRTH;
-		double deaths = (float) seconds / (float) SEC_PER_DEATH;
-		double immigrants = (float) seconds / (float) SEC_PER_IMMIGRANT;
-		double total = births - deaths + immigrants;
+		System.out.println("After 0 year: " + current_population);
 
-		population += total;
+		current_population += new_total_per_year;
+		System.out.println("After 1 year: " + current_population);
+
+		current_population += new_total_per_year;
+		System.out.println("After 2 year: " + current_population);
+
+		current_population += new_total_per_year;
+		System.out.println("After 3 year: " + current_population);
+
+		current_population += new_total_per_year;
+		System.out.println("After 4 year: " + current_population);
+
+		current_population += new_total_per_year;
+		System.out.println("After 5 year: " + current_population);
 	}
 }
