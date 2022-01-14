@@ -5,7 +5,7 @@ public class Pro3_64010009 {
 	static int number = -1;
 	static int digit_sum = 0;
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 
 		Pro3_64010009.getUserInput();
 		Pro3_64010009.findDigitSum();

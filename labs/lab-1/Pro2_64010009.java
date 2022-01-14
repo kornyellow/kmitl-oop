@@ -10,7 +10,7 @@ public class Pro2_64010009 {
 	static double x = 0;
 	static double y = 0;
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 
 		Pro2_64010009.solveLinearEquation();
 

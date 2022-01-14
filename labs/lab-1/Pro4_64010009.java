@@ -9,7 +9,7 @@ public class Pro4_64010009 {
 	static double height = -1;
 	static double bmi;
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 
 		Pro4_64010009.getUserInput();
 		Pro4_64010009.findBMI();

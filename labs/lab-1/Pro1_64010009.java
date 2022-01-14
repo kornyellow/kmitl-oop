@@ -3,6 +3,7 @@ public class Pro1_64010009 {
 	final static int SEC_PER_BIRTH = 7;
 	final static int SEC_PER_DEATH = 13;
 	final static int SEC_PER_IMMIGRANT = 45;
+
 	final static int CURRENT_POPULATION = 312032486;
 	final static int AFTER_YEARS = 5;
 
@@ -22,9 +23,9 @@ public class Pro1_64010009 {
 		int minutes = hours * 60;
 		int seconds = minutes * 60;
 
-		double births = (float)seconds / (float)SEC_PER_BIRTH;
-		double deaths = (float)seconds / (float)SEC_PER_DEATH;
-		double immigrants = (float)seconds / (float)SEC_PER_IMMIGRANT;
+		double births = (float) seconds / (float) SEC_PER_BIRTH;
+		double deaths = (float) seconds / (float) SEC_PER_DEATH;
+		double immigrants = (float) seconds / (float) SEC_PER_IMMIGRANT;
 		double total = births - deaths + immigrants;
 
 		population += total;
