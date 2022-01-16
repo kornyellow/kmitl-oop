@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Pro2_64010009 {
+public class Lab1_Pro2_64010009 {
 
 	public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-public class Pro1_64010009 {
+public class Lab1_Pro1_64010009 {
 
 	public static void main(String[] args) {
 
