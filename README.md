@@ -1,17 +1,15 @@
-# KMITL Object Oriented Programming
+# KMITL Object-Oriented Programming
 
-A place to store my works on subject Object Oriented Programming
-
-- [/labs](https://github.com/KornYellow/kmitl-oop/tree/master/labs)
+A place to store my works on subject Object-Oriented Programming
 
 ## Work to do / Done
 
 - **_Labs_**
-	- [ ] _Lab 1_
-	- [ ] _Lab 2_
-	- [ ] _Lab 3_
-	- [ ] _Lab 4_
-	- [ ] _Lab 5_
+    - [x] _Lab 1_
+    - [ ] _Lab 2_
+    - [ ] _Lab 3_
+    - [ ] _Lab 4_
+    - [ ] _Lab 5_
 
 ## References
 
