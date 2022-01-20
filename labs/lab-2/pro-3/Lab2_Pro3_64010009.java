@@ -6,57 +6,65 @@ public class Lab2_Pro3_64010009 {
 
 		Scanner scanner = new Scanner(System.in);
 
-		int year, month, day;
+		String city_first, city_second, city_third;
 
 		while (true) {
 
-			System.out.print("Enter a year: (e.g., 2012): ");
-			year = scanner.nextInt();
+			System.out.print("Enter the first city: ");
+			city_first = scanner.nextLine();
 
-			if (year > 0) break;
-			System.out.println("ERROR: invalid year");
+			if (!city_first.isBlank() && city_first.charAt(0) >= 'A' && city_first.charAt(0) <= 'Z')
+				break;
+
+			System.out.println("ERROR: invalid city name");
 		}
 		while (true) {
 
-			System.out.print("Enter a month: 1-12: ");
-			month = scanner.nextInt();
+			System.out.print("Enter the second city: ");
+			city_second = scanner.nextLine();
 
-			if (month >= 1 && month <= 12) break;
-			System.out.println("ERROR: invalid month");
+			if (!city_second.isBlank() && city_second.charAt(0) >= 'A' && city_second.charAt(0) <= 'Z')
+				break;
+
+			System.out.println("ERROR: invalid city name");
 		}
 		while (true) {
 
-			System.out.print("Enter day of the month: 1-31: ");
-			day = scanner.nextInt();
+			System.out.print("Enter the third city: ");
+			city_third = scanner.nextLine();
 
-			if (day >= 1 && day <= 31) break;
-			System.out.println("ERROR: invalid day");
+			if (!city_third.isBlank() && city_third.charAt(0) >= 'A' && city_third.charAt(0) <= 'Z')
+				break;
+
+			System.out.println("ERROR: invalid city name");
 		}
 		scanner.close();
 
-		if (month <= 2) {
+		String result;
 
-			month += 12;
-			year--;
+		if (city_first.compareTo(city_second) < 0 && city_first.compareTo(city_third) < 0) {
+
+			if (city_second.compareTo(city_third) < 0) {
+				result = city_first + " " + city_second + " " + city_third;
+			} else {
+				result = city_first + " " + city_third + " " + city_second;
+			}
+		} else if (city_second.compareTo(city_first) < 0 && city_second.compareTo(city_third) < 0) {
+
+			if (city_first.compareTo(city_third) < 0) {
+				result = city_second + " " + city_first + " " + city_third;
+			} else {
+				result = city_second + " " + city_third + " " + city_first;
+			}
+		} else {
+
+			if (city_second.compareTo(city_first) < 0) {
+				result = city_third + " " + city_second + " " + city_first;
+			} else {
+				result = city_third + " " + city_first + " " + city_second;
+			}
 		}
 
-		int h, q, m, j, k;
-		q = day;
-		m = month;
-		j = year / 100;
-		k = year % 100;
-		h = (q + ((26 * (m + 1)) / 10) + k + (k / 4) + (j / 4) + (5 * j)) % 7;
-
-		String day_str;
-
-		if (h == 0) day_str = "Saturday";
-		else if (h == 1) day_str = "Sunday";
-		else if (h == 2) day_str = "Monday";
-		else if (h == 3) day_str = "Tuesday";
-		else if (h == 4) day_str = "Wednesday";
-		else if (h == 5) day_str = "Thursday";
-		else day_str = "Friday";
-
-		System.out.println("Day of the week is " + day_str);
+		System.out.println("The three cities in alphabetical order are " + result);
 	}
 }

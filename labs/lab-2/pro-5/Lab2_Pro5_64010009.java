@@ -1,30 +1,36 @@
-import java.util.Scanner;
-
 public class Lab2_Pro5_64010009 {
 
 	public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
+		final int MAX_PRINT_NUMBER = 100;
 
-		int number_of_lines;
+		int sequence_first = 1;
+		int sequence_second = 3;
 
-		while (true) {
+		int first_set_increment = 2;
+		boolean is_first_set = true;
 
-			System.out.print("Enter the number of lines: ");
-			number_of_lines = scanner.nextInt();
+		int number_count = 1;
 
-			if (number_of_lines >= 1) break;
-			System.out.println("ERROR: input cannot be less than one");
-		}
-		scanner.close();
+		while (number_count < MAX_PRINT_NUMBER) {
 
-		for (int y = 0; y < number_of_lines; y++) {
-			for (int x = -number_of_lines + 1; x <= number_of_lines - 1; x++) {
+			if (is_first_set) {
 
-				if (y >= Math.abs(x)) System.out.print((Math.abs(x) + 1) + " ");
-				else System.out.print("  ");
+				System.out.print(sequence_first + ", ");
+				sequence_first += first_set_increment;
+				first_set_increment += 2;
+
+			} else {
+
+				System.out.print(sequence_second + ", ");
+				sequence_second += 3;
 			}
-			System.out.print("\n");
+
+			is_first_set = !is_first_set;
+			number_count++;
 		}
+
+		if (is_first_set) System.out.print(sequence_first);
+		else System.out.print(sequence_second);
 	}
 }
