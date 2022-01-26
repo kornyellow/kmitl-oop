@@ -11,6 +11,12 @@
       <sourceFolder url="file://$MODULE_DIR$/labs/lab-2/pro-3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/labs/lab-2/pro-4" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/labs/lab-2/pro-5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/labs/lab-3/pro-1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/labs/lab-3/pro-2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/labs/lab-3/pro-3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/labs/lab-4/pro-1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/labs/lab-4/pro-2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/labs/lab-4/pro-3" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/out" />
     <orderEntry type="inheritedJdk" />
