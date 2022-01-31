@@ -6,10 +6,15 @@ A place to store my works on subject Object-Oriented Programming
 
 - **_Labs_**
     - [x] _Lab 1_
-    - [ ] _Lab 2_
-    - [ ] _Lab 3_
+    - [x] _Lab 2_
+    - [x] _Lab 3_
     - [ ] _Lab 4_
     - [ ] _Lab 5_
+    - [ ] _Lab 6_
+    - [ ] _Lab 7_
+    - [ ] _Lab 8_
+    - [ ] _Lab 9_
+    - [ ] _Lab 10_
 
 ## References
 
