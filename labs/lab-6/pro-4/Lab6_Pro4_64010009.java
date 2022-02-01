@@ -45,7 +45,7 @@ public class Lab6_Pro4_64010009 {
 		System.out.printf("Tax is %.2f\n", computeTax(status, income));
 	}
 
-	public static double computeTax(int status, double income) {
+	private static double computeTax(int status, double income) {
 
 		if (income <= BRACKETS[status][0])
 			return income * RATES[0];

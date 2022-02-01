@@ -17,9 +17,8 @@ public class Lab6_Pro6_64010009 {
 
 		final double DEFAULT_BALANCE = 100;
 
-		for (int id = 0; id < accounts.length; id++) {
+		for (int id = 0; id < accounts.length; id++)
 			accounts[id] = new Account(id, DEFAULT_BALANCE);
-		}
 
 		while (true) {
 
@@ -43,12 +42,12 @@ public class Lab6_Pro6_64010009 {
 		scanner.close();
 	}
 
-	public static void checkBalance() {
+	private static void checkBalance() {
 
 		System.out.printf("The balance is %.2f\n", accounts[selected_id].getBalance());
 	}
 
-	public static void withdraw() {
+	private static void withdraw() {
 
 		double amount;
 
@@ -63,7 +62,7 @@ public class Lab6_Pro6_64010009 {
 		accounts[selected_id].withdraw(amount);
 	}
 
-	public static void deposit() {
+	private static void deposit() {
 
 		double amount;
 
@@ -78,7 +77,7 @@ public class Lab6_Pro6_64010009 {
 		accounts[selected_id].deposit(amount);
 	}
 
-	public static void promptMenu() {
+	private static void promptMenu() {
 
 		System.out.println("Main menu");
 		System.out.println("1: check balance");
@@ -96,7 +95,7 @@ public class Lab6_Pro6_64010009 {
 		}
 	}
 
-	public static void promptID() {
+	private static void promptID() {
 
 		while (true) {
 
