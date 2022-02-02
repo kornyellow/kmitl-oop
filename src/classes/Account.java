@@ -34,7 +34,7 @@ public class Account {
 
 	public double getMonthlyInterestRate() {
 
-		return Account.annual_interest_rate / 12;
+		return this.annual_interest_rate / 12;
 	}
 
 	private int id;
@@ -68,15 +68,15 @@ public class Account {
 		return this.date_created;
 	}
 
-	private static double annual_interest_rate;
+	private double annual_interest_rate;
 
-	public static double getAnnualInterestRate() {
+	public double getAnnualInterestRate() {
 
-		return Account.annual_interest_rate;
+		return this.annual_interest_rate;
 	}
 
-	public static void setAnnualInterestRate(double annual_interest_rate) {
+	public void setAnnualInterestRate(double annual_interest_rate) {
 
-		Account.annual_interest_rate = annual_interest_rate;
+		this.annual_interest_rate = annual_interest_rate;
 	}
 }

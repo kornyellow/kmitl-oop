@@ -30,7 +30,7 @@ public class List {
 
 		System.out.println("Creating a list containing " + max_elements + " elements,");
 		displayList(numbers_list);
-		System.out.println("classes.List created.");
+		System.out.println("List created.");
 
 		return numbers_list;
 	}
