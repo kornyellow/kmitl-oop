@@ -1,10 +1,14 @@
 package labs.lab4.pro2;
 
 import java.util.GregorianCalendar;
+import java.util.Scanner;
 
 public class Lab4_Pro2_64010009 {
 
 	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.println(scanner);
 
 		GregorianCalendar calendar = new GregorianCalendar();
 

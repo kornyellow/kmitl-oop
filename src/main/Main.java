@@ -1,5 +1,7 @@
 package main;
 
+import classes.StopWatch;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Scanner;
@@ -7,6 +9,8 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) throws ClassNotFoundException, InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+
+		StopWatch stopwatch = new StopWatch();
 
 		Scanner scanner = new Scanner(System.in);
 		int lab_number;
@@ -28,6 +32,10 @@ public class Main {
 
 		Class<?> lab = Class.forName("labs.lab" + lab_number + ".pro" + program_number + ".Lab" + lab_number + "_Pro" + program_number + "_64010009");
 		Method main_method = lab.getMethod("main", String[].class);
+
+		stopwatch.start();
 		main_method.invoke(null, (Object) null);
+		stopwatch.stop();
+		System.out.printf("\n%.2fs", stopwatch.getElapsedTime() / 1000000000.f);
 	}
 }
