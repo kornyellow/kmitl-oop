@@ -39,8 +39,8 @@ public class Account {
 
 	private int id;
 	private double balance;
-
 	private final Date date_created;
+	private double annual_interest_rate;
 
 	public int getID() {
 
@@ -67,8 +67,6 @@ public class Account {
 
 		return this.date_created;
 	}
-
-	private double annual_interest_rate;
 
 	public double getAnnualInterestRate() {
 
