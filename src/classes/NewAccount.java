@@ -11,6 +11,11 @@ public class NewAccount extends Account {
 		this.transactions = new ArrayList<>();
 	}
 
+	public void withdraw(double amount) {
+
+		this.withdraw(amount, "");
+	}
+
 	public void withdraw(double amount, String detail) {
 
 		double balance_after_transaction = this.getBalance() - amount;
@@ -22,6 +27,11 @@ public class NewAccount extends Account {
 			balance_after_transaction,
 			detail
 		));
+	}
+
+	public void deposit(double amount) {
+
+		this.deposit(amount, "");
 	}
 
 	public void deposit(double amount, String detail) {
