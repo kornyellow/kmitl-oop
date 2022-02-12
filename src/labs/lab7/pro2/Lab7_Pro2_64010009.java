@@ -1,6 +1,7 @@
 package labs.lab7.pro2;
 
-import classes.*;
+import classes.NewAccount;
+import classes.Transaction;
 
 public class Lab7_Pro2_64010009 {
 
@@ -17,7 +18,7 @@ public class Lab7_Pro2_64010009 {
 
 		System.out.println("Name: " + account_george.getName());
 		System.out.println("Account ID: " + account_george.getID());
-		System.out.println("Annual interest rate: " + account_george.getAnnualInterestRate());
+		System.out.println("Annual interest rate: " + account_george.getAnnualInterestRate() * 100);
 		System.out.println("Balance: " + account_george.getBalance());
 
 		System.out.println("Date\t\t\t\t\t\t\t\tType\t\t\tAmount\t\t\tBalance");
