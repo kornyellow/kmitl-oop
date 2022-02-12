@@ -21,7 +21,7 @@ public class Palindrome {
 			number++;
 		}
 
-		System.out.println("classes.Palindrome prime created.");
+		System.out.println("Palindrome prime created.");
 	}
 
 	private static boolean isPrime(int number) {
