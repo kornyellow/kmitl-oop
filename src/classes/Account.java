@@ -20,6 +20,7 @@ public class Account {
 	public void withdraw(double amount) {
 
 		this.balance -= amount;
+		if (this.balance < 0) this.balance = 0;
 	}
 
 	public void deposit(double amount) {

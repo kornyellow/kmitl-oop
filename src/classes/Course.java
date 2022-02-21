@@ -76,6 +76,15 @@ public class Course {
 		this.number_of_students = 0;
 	}
 
+	private final String course_name;
+	private String[] students;
+	private int number_of_students;
+
+	public String getCourseName() {
+
+		return this.course_name;
+	}
+
 	public String[] getStudents() {
 
 		return this.students;
@@ -84,14 +93,5 @@ public class Course {
 	public int getNumberOfStudents() {
 
 		return this.number_of_students;
-	}
-
-	private final String course_name;
-	private String[] students;
-	private int number_of_students;
-
-	public String getCourseName() {
-
-		return this.course_name;
 	}
 }

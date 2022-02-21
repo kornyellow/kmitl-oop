@@ -2,9 +2,6 @@ package classes;
 
 public class BMI {
 
-	private static final double KILO_PER_POUND = 0.45359237;
-	private static final double METRE_PER_INCH = 0.0254;
-
 	public BMI(String name, int age, double weight, int feet, int inches) {
 
 		this.name = name;
@@ -43,6 +40,9 @@ public class BMI {
 		if (bmi < 30.0) return "Overweight";
 		return "Obese";
 	}
+
+	private static final double KILO_PER_POUND = 0.45359237;
+	private static final double METRE_PER_INCH = 0.0254;
 
 	private final String name;
 	private final int age;

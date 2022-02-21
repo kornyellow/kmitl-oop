@@ -90,34 +90,42 @@ public class Tax {
 	private double taxable_income;
 
 	public void setFilingStatus(int filing_status) {
+
 		this.filing_status = filing_status;
 	}
 
 	public int getFilingStatus() {
+
 		return this.filing_status;
 	}
 
 	public void setBrackets(int[][] brackets) {
+
 		this.brackets = brackets;
 	}
 
 	public int[][] getBrackets() {
+
 		return this.brackets;
 	}
 
 	public void setRates(double[] rates) {
+
 		this.rates = rates;
 	}
 
 	public double[] getRates() {
+
 		return this.rates;
 	}
 
 	public void setTaxableIncome(double taxable_income) {
+
 		this.taxable_income = taxable_income;
 	}
 
 	public double getTaxableIncome() {
+
 		return this.taxable_income;
 	}
 }
