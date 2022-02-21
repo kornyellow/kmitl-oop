@@ -8,8 +8,8 @@ A place to store my works on subject Object-Oriented Programming
     - [x] _Lab 1_
     - [x] _Lab 2_
     - [x] _Lab 3_
-    - [ ] _Lab 4_
-    - [ ] _Lab 5_
+    - [x] _Lab 4_
+    - [x] _Lab 5_
     - [ ] _Lab 6_
     - [ ] _Lab 7_
     - [ ] _Lab 8_
