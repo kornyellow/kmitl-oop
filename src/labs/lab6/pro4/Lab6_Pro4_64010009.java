@@ -44,7 +44,7 @@ public class Lab6_Pro4_64010009 {
 		}
 		scanner.close();
 
-		System.out.printf("classes.Tax is %.2f\n", computeTax(status, income));
+		System.out.printf("Tax is %.2f\n", computeTax(status, income));
 	}
 
 	private static double computeTax(int status, double income) {

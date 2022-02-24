@@ -18,11 +18,11 @@ public class BMI {
 		double bmi = this.calculateBMI();
 		String interpretation = BMI.getInterpretation(bmi);
 
-		System.out.println("Display " + this.name + " classes.BMI:");
+		System.out.println("Display " + this.name + " BMI:");
 		System.out.println("\t- Age: " + this.age + " years old");
 		System.out.println("\t- Weight: " + this.weight + " pounds");
 		System.out.println("\t- Height: " + this.feet + " feet and " + this.inches + " inches");
-		System.out.println("\t- classes.BMI: " + bmi + " (" + interpretation + ")");
+		System.out.println("\t- BMI: " + bmi + " (" + interpretation + ")");
 	}
 
 	private double calculateBMI() {

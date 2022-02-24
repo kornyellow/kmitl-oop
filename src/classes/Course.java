@@ -11,7 +11,7 @@ public class Course {
 	public void display() {
 
 		System.out.println("Display course data: ");
-		System.out.println("\t- classes.Course Name: " + this.course_name);
+		System.out.println("\t- Course Name: " + this.course_name);
 		System.out.println("\t- Number of students: " + this.number_of_students);
 		System.out.print("\t- Students: ");
 

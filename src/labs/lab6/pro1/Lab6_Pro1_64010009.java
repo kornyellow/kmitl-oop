@@ -14,7 +14,7 @@ public class Lab6_Pro1_64010009 {
 		int age, feet, inches;
 		double weight;
 
-		System.out.println("--- classes.BMI Calculator ---");
+		System.out.println("--- BMI Calculator ---");
 
 		while (true) {
 

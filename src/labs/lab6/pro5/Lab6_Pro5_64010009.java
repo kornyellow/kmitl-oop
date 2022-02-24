@@ -20,6 +20,6 @@ public class Lab6_Pro5_64010009 {
 			TAXABLE_INCOME
 		);
 
-		System.out.printf("classes.Tax for taxable income of %.2f is %.2f\n", TAXABLE_INCOME, tax.getTax());
+		System.out.printf("Tax for taxable income of %.2f is %.2f\n", TAXABLE_INCOME, tax.getTax());
 	}
 }

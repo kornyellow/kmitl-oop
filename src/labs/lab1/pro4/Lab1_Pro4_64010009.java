@@ -26,7 +26,7 @@ public class Lab1_Pro4_64010009 {
 			height *= INCH_PER_METER;
 			bmi = weight / (height * height);
 
-			System.out.println("classes.BMI is " + bmi);
+			System.out.println("BMI is " + bmi);
 
 		} else System.out.println("ERROR: inputs cannot be less than zero");
 	}
