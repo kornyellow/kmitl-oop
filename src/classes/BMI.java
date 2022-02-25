@@ -2,35 +2,27 @@ package classes;
 
 public class BMI {
 
-	public BMI(String name, int age, double weight, int feet, int inches) {
+	public BMI(String name, int age, double weight_kilo, double height_metre) {
 
 		this.name = name;
 		this.age = age;
-		this.weight = weight;
-		this.feet = feet;
-		this.inches = inches;
+		this.weight_kilo = weight_kilo;
+		this.height_metre = height_metre;
 
 		this.bmi = this.calculateBMI();
 	}
 
 	public void displayBMI() {
 
-		double bmi = this.calculateBMI();
-		String interpretation = BMI.getInterpretation(bmi);
+		String interpretation = BMI.getInterpretation(this.bmi);
 
-		System.out.println("Display " + this.name + " BMI:");
-		System.out.println("\t- Age: " + this.age + " years old");
-		System.out.println("\t- Weight: " + this.weight + " pounds");
-		System.out.println("\t- Height: " + this.feet + " feet and " + this.inches + " inches");
-		System.out.println("\t- BMI: " + bmi + " (" + interpretation + ")");
+		System.out.printf("Your BMI: %.2f\n", this.bmi);
+		System.out.printf("Interpretation: %s weight\n", interpretation);
 	}
 
 	private double calculateBMI() {
 
-		double weight_kilo = this.weight * KILO_PER_POUND;
-		double height_metre = (this.inches + (this.feet * 12)) * METRE_PER_INCH;
-
-		return weight_kilo / (height_metre * height_metre);
+		return this.weight_kilo / (this.height_metre * this.height_metre);
 	}
 
 	public static String getInterpretation(double bmi) {
@@ -41,14 +33,23 @@ public class BMI {
 		return "Obese";
 	}
 
+	public static double convertPoundToKilo(double pounds) {
+
+		return pounds * BMI.KILO_PER_POUND;
+	}
+
+	public static double convertFeetToMetre(int feet, int inches) {
+
+		return ((feet * 12) + inches) * BMI.METRE_PER_INCH;
+	}
+
 	private static final double KILO_PER_POUND = 0.45359237;
 	private static final double METRE_PER_INCH = 0.0254;
 
 	private final String name;
 	private final int age;
-	private final double weight;
-	private final int feet;
-	private final int inches;
+	private final double weight_kilo;
+	private final double height_metre;
 	private final double bmi;
 
 	public String getName() {
@@ -61,19 +62,14 @@ public class BMI {
 		return this.age;
 	}
 
-	public double getWeight() {
+	public double getWeightKilo() {
 
-		return this.weight;
+		return weight_kilo;
 	}
 
-	public int getFeet() {
+	public double getHeightMeter() {
 
-		return this.feet;
-	}
-
-	public int getInches() {
-
-		return this.inches;
+		return height_metre;
 	}
 
 	public double getBMI() {

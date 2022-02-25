@@ -11,14 +11,14 @@ public class Course {
 	public void display() {
 
 		System.out.println("Display course data: ");
-		System.out.println("\t- Course Name: " + this.course_name);
-		System.out.println("\t- Number of students: " + this.number_of_students);
-		System.out.print("\t- Students: ");
+		System.out.println("- Course Name: " + this.course_name);
+		System.out.println("- Number of students: " + this.number_of_students);
+		System.out.print("- Students: ");
 
 		if (this.students != null) {
 
 			System.out.print("\n");
-			for (String student : this.students) System.out.println("\t\t- " + student);
+			for (String student : this.students) System.out.println("\t- " + student);
 
 		} else System.out.println("-");
 	}
