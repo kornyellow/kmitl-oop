@@ -15,6 +15,9 @@ public class SavingsAccount extends Account {
 	public void withdraw(double amount) {
 
 		this.setBalance(this.getBalance() - amount);
-		if (this.getBalance() < 0) this.setBalance(0);
+		if (this.getBalance() < 0) {
+			System.out.println("ERROR: Savings account cannot be overdrawn");
+			this.setBalance(0);
+		}
 	}
 }

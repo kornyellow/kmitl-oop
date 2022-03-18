@@ -2,11 +2,6 @@ package classes;
 
 public class Person {
 
-	private String name;
-	private String address;
-	private String phone_number;
-	private String email_address;
-
 	public Person(
 		String name,
 		String address,
@@ -20,14 +15,28 @@ public class Person {
 		this.email_address = email_address;
 	}
 
+	public void display() {
+
+		System.out.println("Person");
+		System.out.println("Name: " + this.name);
+		System.out.println("Address: " + this.address);
+		System.out.println("Phone: " + this.phone_number);
+		System.out.println("Email: " + this.email_address);
+	}
+
 	@Override
 	public String toString() {
 
-		String str = getClass().getName();
-		System.out.println(str);
-
-		return str;
+		return "Person{" +
+			"name=" + this.name + ", " +
+			"address=" + this.address + ", " +
+			"email=" + this.email_address + "}";
 	}
+
+	protected String name;
+	protected String address;
+	protected String phone_number;
+	protected String email_address;
 
 	public String getName() {
 

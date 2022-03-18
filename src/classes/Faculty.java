@@ -22,8 +22,31 @@ public class Faculty extends Employee {
 		this.rank = rank;
 	}
 
-	private Time office_hours;
-	private int rank;
+	@Override
+	public void display() {
+
+		System.out.println("Employee");
+		System.out.println("Name: " + this.name);
+		System.out.println("Address: " + this.address);
+		System.out.println("Phone: " + this.phone_number);
+		System.out.println("Email: " + this.email_address);
+		System.out.println("Office: " + this.office);
+		System.out.println("Salary: " + this.salary);
+		System.out.println("Date hired: " + this.date_hired);
+		System.out.println("Office hour: " + this.office_hours);
+		System.out.println("Rank: " + this.rank);
+	}
+
+	@Override
+	public String toString() {
+
+		return super.toString() + " Faculty{" +
+			"office_hour=" + this.office_hours + ", " +
+			"rank=" + this.rank + "}";
+	}
+
+	protected Time office_hours;
+	protected int rank;
 
 	public Time getOfficeHours() {
 

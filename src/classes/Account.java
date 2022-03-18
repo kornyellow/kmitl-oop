@@ -17,10 +17,14 @@ public class Account {
 		this.date_created = new Date();
 	}
 
+	public String toString() {
+
+		return "This account was created at " + this.date_created;
+	}
+
 	public void withdraw(double amount) {
 
 		this.balance -= amount;
-		if (this.balance < 0) this.balance = 0;
 	}
 
 	public void deposit(double amount) {

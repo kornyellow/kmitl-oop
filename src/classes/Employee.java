@@ -20,9 +20,31 @@ public class Employee extends Person {
 		this.date_hired = date_hired;
 	}
 
-	private String office;
-	private int salary;
-	private Date date_hired;
+	@Override
+	public void display() {
+
+		System.out.println("Employee");
+		System.out.println("Name: " + this.name);
+		System.out.println("Address: " + this.address);
+		System.out.println("Phone: " + this.phone_number);
+		System.out.println("Email: " + this.email_address);
+		System.out.println("Office: " + this.office);
+		System.out.println("Salary: " + this.salary);
+		System.out.println("Date hired: " + this.date_hired);
+	}
+
+	@Override
+	public String toString() {
+
+		return super.toString() + " Employee{" +
+			"office=" + this.office + ", " +
+			"salary=" + this.salary + ", " +
+			"date_hired=" + this.date_hired + "}";
+	}
+
+	protected String office;
+	protected int salary;
+	protected Date date_hired;
 
 	public String getOffice() {
 

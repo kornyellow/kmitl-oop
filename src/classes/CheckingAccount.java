@@ -11,7 +11,11 @@ public class CheckingAccount extends Account {
 	public void withdraw(double amount) {
 
 		this.setBalance(this.getBalance() - amount);
-		if (this.getBalance() < -this.overdraft_limit) this.setBalance(-this.overdraft_limit);
+		if (this.getBalance() < -this.overdraft_limit) {
+
+			System.out.println("ERROR: cannot withdrawn over the limit (" + this.overdraft_limit + ")");
+			this.setBalance(-this.overdraft_limit);
+		}
 	}
 
 	private final double overdraft_limit;
