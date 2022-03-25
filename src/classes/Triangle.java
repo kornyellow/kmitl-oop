@@ -13,7 +13,7 @@ public class Triangle extends GeometricObject {
 		this.side2 = side2;
 		this.side3 = side3;
 	}
-
+	
 	@Override
 	public double getArea() {
 		double s = 0.5 * (this.side1 + this.side2 + this.side3);
@@ -23,6 +23,11 @@ public class Triangle extends GeometricObject {
 	@Override
 	public double getPerimeter() {
 		return this.side1 + this.side2 + this.side3;
+	}
+
+	@Override
+	public String toString() {
+		return "Triangle: side1 = " + this.side1 + " side2 = " + this.side2 + " side3 = " + this.side3;
 	}
 
 	public void display() {
