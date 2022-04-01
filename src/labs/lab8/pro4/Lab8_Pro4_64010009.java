@@ -15,7 +15,7 @@ public class Lab8_Pro4_64010009 {
 		System.out.println();
 
 		System.out.print("Such that first and second octagon is ");
-		if (octagon.compareTo(new_octagon)) {
+		if (octagon.compareTo(new_octagon) == 0) {
 			System.out.println("equal.");
 		} else System.out.println("not equal.");
 	}

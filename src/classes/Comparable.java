@@ -1,5 +1,5 @@
 package classes;
 
 public interface Comparable {
-	boolean compareTo(Comparable comparable);
+	int compareTo(Comparable comparable);
 }

@@ -21,9 +21,11 @@ public class Octagon extends GeometricObject implements Comparable, Cloneable {
 	}
 
 	@Override
-	public boolean compareTo(Comparable comparable) {
+	public int compareTo(Comparable comparable) {
 		Octagon octagon = (Octagon) comparable;
-		return this.getArea() == octagon.getArea();
+		if (this.getArea() > octagon.getArea()) return 1;
+		else if (this.getArea() < octagon.getArea()) return -1;
+		return 0;
 	}
 
 	@Override

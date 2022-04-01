@@ -34,7 +34,7 @@ public class Lab8_Pro3_64010009 {
 		System.out.println("The second rectangle area is " + rectangle2.getArea());
 
 		System.out.print("Such that first and second rectangle is ");
-		if (rectangle1.compareTo(rectangle2)) {
+		if (rectangle1.compareTo(rectangle2) == 0) {
 			System.out.println("equal.");
 		} else System.out.println("not equal.");
 	}

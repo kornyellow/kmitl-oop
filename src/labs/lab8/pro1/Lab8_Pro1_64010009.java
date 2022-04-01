@@ -12,10 +12,10 @@ public class Lab8_Pro1_64010009 {
 
 		double side1, side2, side3;
 		String color;
-		boolean is_filled;
+		String is_filled;
 
 		while (true) {
-			System.out.print("Enter three triangle sides (A B C): ");
+			System.out.print("Input 3 sides of the triangle: ");
 			side1 = scanner.nextDouble();
 			side2 = scanner.nextDouble();
 			side3 = scanner.nextDouble();
@@ -23,18 +23,27 @@ public class Lab8_Pro1_64010009 {
 			System.out.println("ERROR: invalid inputs, try again!");
 		}
 
-		System.out.print("What color of a triangle: ");
+		System.out.print("The color is: ");
 		color = scanner.next();
 
-		System.out.print("Does a triangle get filled (true/false): ");
-		is_filled = scanner.nextBoolean();
+		while (true) {
+			System.out.print("The triangle is filled (y/n): ");
+			is_filled = scanner.next();
+			if (is_filled.equals("y") || is_filled.equals("n")) break;
+			System.out.println("ERROR: invalid input, try again!");
+		}
 
 		scanner.close();
 
 		Triangle triangle = new Triangle(side1, side2, side3);
 		triangle.setColor(color);
-		triangle.setIsFilled(is_filled);
-		
-		triangle.display();
+		triangle.setIsFilled((is_filled.equals("y")));
+
+		System.out.println("----------------------------");
+		System.out.println(triangle);
+		System.out.println("The area is " + triangle.getArea());
+		System.out.println("The perimeter is " + triangle.getPerimeter());
+		System.out.println("The color is " + triangle.getColor());
+		System.out.println("Triangle is filled: " + triangle.isFilled());
 	}
 }

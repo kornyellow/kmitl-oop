@@ -26,9 +26,9 @@ public abstract class GeometricObject {
 
 	abstract public double getPerimeter();
 
-	private String color;
-	private boolean is_filled;
-	private final Date date_created;
+	protected String color;
+	protected boolean is_filled;
+	protected final Date date_created;
 
 	public String getColor() {
 		return color;
