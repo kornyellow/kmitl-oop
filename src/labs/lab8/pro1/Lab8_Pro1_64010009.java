@@ -1,5 +1,6 @@
 package labs.lab8.pro1;
 
+import classes.GeometricObject;
 import classes.Triangle;
 
 import java.util.Scanner;
@@ -12,10 +13,10 @@ public class Lab8_Pro1_64010009 {
 
 		double side1, side2, side3;
 		String color;
-		String is_filled;
+		boolean is_filled;
 
 		while (true) {
-			System.out.print("Input 3 sides of the triangle: ");
+			System.out.print("Enter three triangle sides (A B C): ");
 			side1 = scanner.nextDouble();
 			side2 = scanner.nextDouble();
 			side3 = scanner.nextDouble();
@@ -23,27 +24,18 @@ public class Lab8_Pro1_64010009 {
 			System.out.println("ERROR: invalid inputs, try again!");
 		}
 
-		System.out.print("The color is: ");
+		System.out.print("What color of a triangle: ");
 		color = scanner.next();
 
-		while (true) {
-			System.out.print("The triangle is filled (y/n): ");
-			is_filled = scanner.next();
-			if (is_filled.equals("y") || is_filled.equals("n")) break;
-			System.out.println("ERROR: invalid input, try again!");
-		}
+		System.out.print("Does a triangle get filled (true/false): ");
+		is_filled = scanner.nextBoolean();
 
 		scanner.close();
 
 		Triangle triangle = new Triangle(side1, side2, side3);
 		triangle.setColor(color);
-		triangle.setIsFilled((is_filled.equals("y")));
+		triangle.setIsFilled(is_filled);
 
-		System.out.println("----------------------------");
-		System.out.println(triangle);
-		System.out.println("The area is " + triangle.getArea());
-		System.out.println("The perimeter is " + triangle.getPerimeter());
-		System.out.println("The color is " + triangle.getColor());
-		System.out.println("Triangle is filled: " + triangle.isFilled());
+		GeometricObject.displayObject(triangle);
 	}
 }

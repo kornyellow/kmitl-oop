@@ -22,6 +22,27 @@ public abstract class GeometricObject {
 			"\t- Filled: " + this.is_filled + "\n";
 	}
 
+	public static void displayObject(Object object) {
+		if (object instanceof Triangle triangle) {
+			System.out.println("Side1: " + triangle.getSide1());
+			System.out.println("Side2: " + triangle.getSide2());
+			System.out.println("Side3: " + triangle.getSide3());
+			System.out.println("Area: " + triangle.getArea());
+			System.out.println("Perimeter: " + triangle.getPerimeter());
+		} else if (object instanceof Rectangle rectangle) {
+			System.out.println("Width: " + rectangle.getWidth());
+			System.out.println("Height: " + rectangle.getHeight());
+			System.out.println("Area: " + rectangle.getArea());
+			System.out.println("Perimeter: " + rectangle.getPerimeter());
+		} else if (object instanceof Circle circle) {
+			System.out.println("Diameter: " + circle.getDiameter());
+			System.out.println("Area: " + circle.getArea());
+			System.out.println("Perimeter: " + circle.getPerimeter());
+		} else {
+			System.out.println("ERROR: invalid object");
+		}
+	}
+
 	abstract public double getArea();
 
 	abstract public double getPerimeter();
