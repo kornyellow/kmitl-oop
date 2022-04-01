@@ -31,7 +31,7 @@ public class Circle extends GeometricObject implements Comparable {
 
 	@Override
 	public int compareTo(Comparable comparable) {
-		Circle circle = (Circle) comparable;
+		if (!(comparable instanceof Circle circle)) return 0;
 		if (this.getArea() > circle.getArea()) return 1;
 		else if (this.getArea() < circle.getArea()) return -1;
 		return 0;

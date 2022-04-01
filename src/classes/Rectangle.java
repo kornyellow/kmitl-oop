@@ -20,7 +20,7 @@ public class Rectangle extends GeometricObject implements Comparable {
 
 	@Override
 	public int compareTo(Comparable comparable) {
-		Rectangle rectangle = (Rectangle) comparable;
+		if (!(comparable instanceof Rectangle rectangle)) return 0;
 		if (this.getArea() > rectangle.getArea()) return 1;
 		else if (this.getArea() < rectangle.getArea()) return -1;
 		return 0;
