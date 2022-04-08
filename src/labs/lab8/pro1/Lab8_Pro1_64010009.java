@@ -32,10 +32,15 @@ public class Lab8_Pro1_64010009 {
 
 		scanner.close();
 
-		Triangle triangle = new Triangle(side1, side2, side3);
-		triangle.setColor(color);
-		triangle.setIsFilled(is_filled);
+		try {
+			Triangle triangle = new Triangle(side1, side2, side3);
+			triangle.setColor(color);
+			triangle.setIsFilled(is_filled);
 
-		GeometricObject.displayObject(triangle);
+			GeometricObject.displayObject(triangle);
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }

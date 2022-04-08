@@ -35,15 +35,20 @@ public class Lab8_Pro2_64010009 {
 
 		scanner.close();
 
-		Triangle triangle = new Triangle(side1, side2, side3);
-		triangle.setColor(color);
-		triangle.setIsFilled((is_filled.equals("y")));
+		try {
+			Triangle triangle = new Triangle(side1, side2, side3);
+			triangle.setColor(color);
+			triangle.setIsFilled((is_filled.equals("y")));
 
-		System.out.println("----------------------------");
-		System.out.println(triangle);
-		System.out.println("The area is " + triangle.getArea());
-		System.out.println("The perimeter is " + triangle.getPerimeter());
-		System.out.println("The color is " + triangle.getColor());
-		System.out.println("Triangle is filled: " + triangle.isFilled());
+			System.out.println("----------------------------");
+			System.out.println(triangle);
+			System.out.println("The area is " + triangle.getArea());
+			System.out.println("The perimeter is " + triangle.getPerimeter());
+			System.out.println("The color is " + triangle.getColor());
+			System.out.println("Triangle is filled: " + triangle.isFilled());
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }

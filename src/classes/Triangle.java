@@ -8,12 +8,21 @@ public class Triangle extends GeometricObject {
 		this.side3 = 3;
 	}
 
-	public Triangle(double side1, double side2, double side3) {
-		this.side1 = side1;
-		this.side2 = side2;
-		this.side3 = side3;
+	public Triangle(double side1, double side2, double side3) throws IllegalTriangleException {
+		boolean isValid = true;
+		if (side1 + side2 < side3) isValid = false;
+		else if (side2 + side3 < side1) isValid = false;
+		else if (side3 + side1 < side2) isValid = false;
+
+		if (!isValid) {
+			throw new IllegalTriangleException("ERROR: illegal triangle sides, cannot create triangle!");
+		} else {
+			this.side1 = side1;
+			this.side2 = side2;
+			this.side3 = side3;
+		}
 	}
-	
+
 	@Override
 	public double getArea() {
 		double s = 0.5 * (this.side1 + this.side2 + this.side3);
