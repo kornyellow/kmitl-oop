@@ -4,4 +4,4 @@
 
 ## แหล่งอ้างอิง
 
-- เว็บทำแลป: https://goedu.kmitl.ac.th/course/view.php?id=5183
+- เว็บทำแลป: https://goedu.kmitl.ac.th/login/index.php
